@@ -3,14 +3,12 @@ local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
--- CONFIGURAÇÕES
-local LINK_DISCORD = "https://discord.gg/2rK2sRTf"
-local LINK_GAMEPASS = "https://www.roblox.com/pt/game-pass/1731556830/Key-primion-scripy-killer"
-local LINK_GET_KEY = "https://link-encurtador.com/exemplo" 
+local LINK_DISCORD = "https://abrir.link/gKtkN"
+local LINK_GAMEPASS = "https://l1nq.com/Ddfwy"
+local LINK_GET_KEY = "https://l1nq.com/HfwKj" 
 local KEY_CORRETA = "key-htpjvg"
 local TIKTOK_USER = "@rmzin358"
 
--- Limpeza
 if playerGui:FindFirstChild("TelaBloqueioPro") then playerGui.TelaBloqueioPro:Destroy() end
 
 local screenGui = Instance.new("ScreenGui")
@@ -18,13 +16,11 @@ screenGui.Name = "TelaBloqueioPro"
 screenGui.IgnoreGuiInset = true
 screenGui.Parent = playerGui
 
--- FUNDO PRETO
 local mainFrame = Instance.new("Frame")
 mainFrame.Size = UDim2.new(1, 0, 1, 0)
 mainFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 mainFrame.Parent = screenGui
 
--- [ EFEITO DE BOLINHAS SUBINDO ]
 task.spawn(function()
     while true do
         local p = Instance.new("Frame")
@@ -42,7 +38,6 @@ task.spawn(function()
     end
 end)
 
--- [ CARD CENTRAL - BORDAS QUADRADAS ]
 local card = Instance.new("Frame")
 card.Size = UDim2.new(0, 420, 0, 480)
 card.Position = UDim2.new(0.5, -210, 0.5, -240)
@@ -54,7 +49,6 @@ local stroke = Instance.new("UIStroke", card)
 stroke.Thickness = 2.5
 stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
--- Animação da Borda Neon
 task.spawn(function()
     local cores = {Color3.fromRGB(160, 32, 240), Color3.fromRGB(0, 255, 255), Color3.fromRGB(100, 100, 100)}
     local i = 1
@@ -71,7 +65,6 @@ layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 layout.VerticalAlignment = Enum.VerticalAlignment.Center
 layout.Parent = card
 
--- 1. TikTok
 local tk = Instance.new("TextLabel")
 tk.Size = UDim2.new(0.9, 0, 0, 30)
 tk.BackgroundTransparency = 1
@@ -81,7 +74,6 @@ tk.Font = Enum.Font.GothamBold
 tk.TextSize = 20
 tk.Parent = card
 
--- 2. Caixa de Texto (INPUT)
 local input = Instance.new("TextBox")
 input.Size = UDim2.new(0.9, 0, 0, 45)
 input.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
@@ -91,12 +83,11 @@ input.TextColor3 = Color3.fromRGB(255, 255, 255)
 input.Font = Enum.Font.Gotham
 input.TextSize = 16
 input.Parent = card
--- Borda quadrada na caixa também
+
 local inputStroke = Instance.new("UIStroke", input)
 inputStroke.Color = Color3.fromRGB(100, 100, 100)
 inputStroke.Thickness = 1
 
--- 3. Suporte (ROXO)
 local btnDiscord = Instance.new("TextButton")
 btnDiscord.Size = UDim2.new(0.9, 0, 0, 45)
 btnDiscord.BackgroundColor3 = Color3.fromRGB(100, 0, 220)
@@ -106,7 +97,7 @@ btnDiscord.Font = Enum.Font.GothamBold
 btnDiscord.TextSize = 14
 btnDiscord.Parent = card
 
--- 4. Get Key e Check Key (Lado a Lado)
+
 local row = Instance.new("Frame")
 row.Size = UDim2.new(0.9, 0, 0, 45)
 row.BackgroundTransparency = 1
@@ -130,7 +121,6 @@ btnCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
 btnCheck.Font = Enum.Font.GothamBold
 btnCheck.Parent = row
 
--- 5. Key Premium (DOURADO)
 local btnPremium = Instance.new("TextButton")
 btnPremium.Size = UDim2.new(0.9, 0, 0, 45)
 btnPremium.BackgroundColor3 = Color3.fromRGB(255, 215, 0)
@@ -139,7 +129,6 @@ btnPremium.TextColor3 = Color3.fromRGB(0, 0, 0)
 btnPremium.Font = Enum.Font.GothamBold
 btnPremium.Parent = card
 
--- Feedback
 local feedback = Instance.new("TextLabel")
 feedback.Size = UDim2.new(0.9, 0, 0, 25)
 feedback.BackgroundTransparency = 1
@@ -150,7 +139,7 @@ feedback.TextSize = 14
 feedback.TextXAlignment = Enum.TextXAlignment.Left
 feedback.Parent = card
 
--- LÓGICA
+
 btnCheck.MouseButton1Click:Connect(function()
     if input.Text == KEY_CORRETA then
         feedback.Text = "Status: Acesso Autorizado!"
