@@ -6,8 +6,8 @@ local playerGui = player:WaitForChild("PlayerGui")
 local LINK_DISCORD = "https://abrir.link/gKtkN"
 local LINK_GAMEPASS = "https://l1nq.com/Ddfwy"
 local LINK_GET_KEY = "https://l1nq.com/HfwKj" 
-local KEY_CORRETA = "key-htpjvg"
-local TIKTOK_USER = "@rmzin358"
+local KEY_CORRETA = "key-htpjv757-_$-()765:+08543jhtuugg"
+local TIKTOK_USER = "@olhos.da.fome"
 
 if playerGui:FindFirstChild("TelaBloqueioPro") then playerGui.TelaBloqueioPro:Destroy() end
 
