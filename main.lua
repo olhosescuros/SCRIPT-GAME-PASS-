@@ -4,7 +4,7 @@ local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
 local LINK_DISCORD = "https://abrir.link/gKtkN"
-local LINK_GAMEPASS = "https://l1nq.com/Ddfwy"
+local LINK_GAMEPASS = "https://www.roblox.com/pt/game-pass/1741144951/DESBLOQUEAR-SCRIPT"
 local LINK_GET_KEY = "https://l1nq.com/HfwKj" 
 local KEY_CORRETA = "key-htpjv757-_$-()765:+08543jhtuugg"
 local TIKTOK_USER = "@olhos.da.fome"
